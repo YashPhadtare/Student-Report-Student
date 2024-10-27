@@ -263,3 +263,7 @@ form {
   margin-top: 10px;
   padding-left: 20px;
 }
+
+optgroup {
+  font-weight: 100;
+}
