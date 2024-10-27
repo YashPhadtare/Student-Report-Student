@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Issue Reporting</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h2>College Issue Reporting</h2>
+      <div class="icon-container" onclick="toggleMenu()">
+        <div class="menu-icon">☰</div>
+      </div>
+    </header>
+
+    <!-- Hidden Menu (for Three-Dash Icon) -->
+    <div id="menu" class="hidden-menu" style="display: none">
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <form action="/submit-issue" method="POST" enctype="multipart/form-data">
+        <h1>Report an Issue</h1>
+
+        <!-- Name Input and Anonymous Option -->
+        <div class="name-container">
+          <label class="radio-label">
+            <input
+              type="radio"
+              name="identity"
+              value="name"
+              checked
+              onchange="toggleNameInput()"
+            />
+            Enter your name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+
+          <label class="radio-label">
+            <input
+              type="radio"
+              name="identity"
+              value="anonymous"
+              onchange="toggleNameInput()"
+            />
+            Remain anonymous
+          </label>
+        </div>
+
+        <!-- Role Selection -->
+        <div class="input-group">
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="student">Student</option>
+            <option value="teaching-staff">Teaching Staff</option>
+            <option value="non-teaching-staff">Non-Teaching Staff</option>
+          </select>
+        </div>
+
+        <!-- Recipient Selection -->
+        <div class="input-group">
+          <select id="recipient" name="recipient" required>
+            <option value="" disabled selected>Select the recipient</option>
+            <option value="principal">Principal</option>
+            <option value="trustee">Trustee</option>
+            <option value="academic-dean">Academic Dean</option>
+            <option value="hostel-rector">Hostel Rector</option>
+          </select>
+        </div>
+
+        <!-- Issue Category Selection -->
+        <div class="input-group">
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Select the category</option>
+            <option value="academic">Academic</option>
+            <option value="administrative">Administrative</option>
+            <option value="facility">Facility</option>
+          </select>
+        </div>
+
+        <!-- Issue Description -->
+        <div class="input-group">
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Describe your issue"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Evidence Upload -->
+        <div class="input-group upload-container">
+          <label for="evidence" class="upload-btn">Upload evidence</label>
+          <input
+            type="file"
+            id="evidence"
+            name="evidence"
+            accept="image/*, application/pdf"
+            style="display: none"
+            onchange="showTickMark()"
+          />
+          <span id="tick-mark" class="tick-mark" style="display: none">✔️</span>
+        </div>
+
+        <!-- Report Type Selection -->
+        <div class="button-group">
+          <button
+            type="button"
+            class="individual-btn"
+            onclick="toggleGroupInput(false)"
+          >
+            Individual
+          </button>
+          <button
+            type="button"
+            class="group-btn"
+            onclick="toggleGroupInput(true)"
+          >
+            Group
+          </button>
+        </div>
+
+        <!-- Additional Group Members (for Group Selection) -->
+        <div id="group-members" class="input-group" style="display: none">
+          <input
+            type="text"
+            id="group-member"
+            name="group-member"
+            placeholder="Enter group member names"
+          />
+          <button type="button" onclick="addGroupMember()">Add Member</button>
+        </div>
+
+        <!-- List of Added Group Members -->
+        <ul id="member-list"></ul>
+
+        <!-- Submit Button -->
+        <div class="input-group">
+          <button type="submit" class="submit-btn">Submit report</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

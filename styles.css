@@ -1,0 +1,265 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 600px;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Form Styling */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+}
+
+.upload-btn {
+  display: block;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tick-mark {
+  margin-left: 10px;
+  font-size: 18px;
+  color: green;
+}
+
+button.upload-btn:hover {
+  background-color: #e5e5e5;
+}
+
+/* Styling for Radio Buttons */
+.name-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+/* Button Group Styling */
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.individual-btn,
+.group-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  width: 48%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#group-members {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 95%;
+}
+
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 600px;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Hidden Menu Styling */
+.hidden-menu {
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.hidden-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hidden-menu li {
+  padding: 10px;
+  text-align: center;
+}
+
+.hidden-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.hidden-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Form Styling */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Other Styling */
+.tick-mark {
+  margin-left: 10px;
+  font-size: 18px;
+  color: green;
+}
+
+#member-list {
+  list-style-type: disc;
+  margin-top: 10px;
+  padding-left: 20px;
+}
